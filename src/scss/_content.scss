@@ -1,0 +1,59 @@
+#mainContent {
+	min-height: 100vh;
+
+	> .container {
+		height: 100%;
+	}
+
+	.services {
+		height: 100%;
+		position: relative;
+
+		&::before, &::after {
+			content: '';
+			width: 100%;
+			height: 0px;
+			left: 0;
+			position: absolute;
+			background-color: $foreground-color;
+		}
+		&::before {
+			top: 17.5%;
+		}
+		&::after {
+			bottom: 17.5%;
+		}
+
+		> .col {
+			display: flex;
+
+			> .row {
+				flex: 1 1 auto;
+				align-items: center;
+			}
+		}
+
+		h1, h4 {
+			text-align: center;
+		}
+
+		h1 {
+			margin: 2rem 0;
+			padding-bottom: 1.5rem;
+			text-transform: capitalize;
+			border-bottom: 1px solid $foreground-color;
+		}
+
+		p {
+			font-size: 150%;
+		}
+	}
+}
+
+@media only screen and (min-width: 48em) {
+	#mainContent .services {
+		&::before, &::after {
+			height: 1px;
+		}
+	}
+}

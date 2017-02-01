@@ -1,0 +1,131 @@
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.col {
+	padding: 0 1rem;
+	max-width: 100%;
+	flex: 1 1 100%;
+}
+
+@media only screen and (min-width: 48em) {
+	.col {
+		> .row {
+			margin: 0 -1rem;
+		}
+		&.one-third {
+			max-width: 33.333333%;
+			flex: 1 1 33.333333%;
+		}
+		&.two-thirds {
+			max-width: 66.666667%;
+			flex: 1 1 66.666667%;
+		}
+		&.one-half {
+			max-width: 50%;
+			flex: 1 1 50%;
+		}
+	}
+}
+
+@media only screen and (min-width: 64em) {
+	.container {
+		max-width: 960px;
+	}
+	.row {
+		margin: 0 -1rem;
+	}
+	.col {
+		&.one {
+			max-width: 10%;
+			flex: 1 1 10%;
+		}
+		&.two {
+			max-width: 20%;
+			flex: 1 1 20%;
+		}
+		&.three {
+			max-width: 30%;
+			flex: 1 1 30%;
+		}
+		&.four {
+			max-width: 40%;
+			flex: 1 1 40%;
+		}
+		&.five {
+			max-width: 50%;
+			flex: 1 1 50%;
+		}
+		&.six {
+			max-width: 60%;
+			flex: 1 1 60%;
+		}
+		&.seven {
+			max-width: 70%;
+			flex: 1 1 70%;
+		}
+		&.eight {
+			max-width: 80%;
+			flex: 1 1 80%;
+		}
+		&.nine {
+			max-width: 90%;
+			flex: 1 1 90%;
+		}
+		&.ten {
+			max-width: 100%;
+			flex: 1 1 100%;
+		}
+		&.offset-by-one {
+			margin-left: 10%;
+		}
+		&.offset-by-two {
+			margin-left: 20%;
+		}
+		&.offset-by-three {
+			margin-left: 30%;
+		}
+		&.offset-by-four {
+			margin-left: 40%;
+		}
+		&.offset-by-five {
+			margin-left: 50%;
+		}
+		&.offset-by-six {
+			margin-left: 60%;
+		}
+		&.offset-by-seven {
+			margin-left: 70%;
+		}
+		&.offset-by-eight {
+			margin-left: 80%;
+		}
+		&.offset-by-nine {
+			margin-left: 90%;
+		}
+	}
+}
+
+@media only screen and (min-width: 80em) {
+	.container {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 100em) {
+	.container {
+		max-width: 1280px;
+	}
+}
+
+@media only screen and (min-width: 120em) {
+	.container {
+		max-width: 1600px;
+	}
+}

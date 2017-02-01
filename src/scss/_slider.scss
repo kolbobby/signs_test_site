@@ -1,0 +1,51 @@
+.slider_frame {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider_container {
+  display: inline-block;
+}
+
+.prev_nav, .next_nav {
+  width: 5rem;
+  height: 5rem;
+  left: 50%;
+  z-index: 1;
+  position: absolute;
+  transform: translateX(-50%);
+  cursor: pointer;
+
+  &.show {
+    display: block;
+  }
+  &.hide {
+    display: none;
+  }
+}
+.prev_nav {
+  top: 5vh;
+}
+.next_nav {
+  bottom: 5vh;
+}
+
+.prev_nav::before, .next_nav::before {
+  content: '';
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  border-right: 0.5rem solid #000;
+  border-top: 0.5rem solid #000;
+}
+.prev_nav::before {
+  transform: rotate(-45deg);
+}
+.next_nav::before {
+  transform: rotate(135deg);
+}
+
+.slide {
+  position: relative;
+}
